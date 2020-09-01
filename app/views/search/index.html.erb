@@ -1,0 +1,20 @@
+<center>
+  <h1><%= @facade.house %></h1>
+  <h3>Order of the Phoenix Members: <%= @facade.members.length %></h3>
+  <section class='members'>
+    <% @facade.members.each do |member| %>
+      <section class='member'>
+        <p>
+          Name: <%= member.name %><br>
+          <% if member.role %>
+            Role: <%= member.role %><br>
+          <% end %>
+          House: <%= member.house %><br>
+          <% if member.patronus %>
+            Patronus: <%= member.patronus %><br>
+          <% end %>
+        </p>
+      </section>
+    <% end %>
+  </section>
+</center>
